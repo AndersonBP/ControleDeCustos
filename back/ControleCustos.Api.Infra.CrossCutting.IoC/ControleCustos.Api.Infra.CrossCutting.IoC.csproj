@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="6.2.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ControleCustos.Api.Business\ControleCustos.Api.Business.csproj" />
+    <ProjectReference Include="..\ControleCustos.Api.Database\ControleCustos.Api.Database.csproj" />
+    <ProjectReference Include="..\ControleCustos.Api.Domain\ControleCustos.Api.Domain.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+</Project>
