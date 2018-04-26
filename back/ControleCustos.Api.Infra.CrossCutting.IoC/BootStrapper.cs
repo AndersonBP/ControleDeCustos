@@ -16,21 +16,19 @@ namespace ControleCustos.Api.Infra.CrossCutting.IoC
 	{
 		public static void RegisterServices(IServiceCollection services, IConfiguration configuration)
 		{
-			//// Context
 			services.AddScoped<Context>();
 			services.AddDbContext<Context>(options =>
 			{
 				options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));
 			});
 
-
-			// Manager
 			services.AddScoped<IFuncionarioManager, FuncionarioManager>();
 			services.AddScoped<IDepartamentoManager, DepartamentoManager>();
+			services.AddScoped<IMovimentacaoManager, MovimentacaoManager>();
 
-			// Repository
 			services.AddScoped<IFuncionarioRepository, FuncionarioRepository>();
 			services.AddScoped<IDepartamentoRepository, DepartamentoRepository>();
+			services.AddScoped<IMovimentacaoRepository, MovimentacaoRepository>();
 
 		}
 	}

@@ -1,0 +1,25 @@
+<div class="panel panel-warning">
+  <div class="panel-heading">
+      <p>Movimentacaos</p> <button [routerLink]="'./novo'" class="btn btn-xs btn-success pull-right">Adicionar</button>
+  </div>
+  <div class="lista panel-body">
+      <table class="table table-condensed table-hover">
+          <thead>
+              <tr>
+                  <th (click)="setOrder('codigo')">#</th>
+                  <th>Nome</th>
+                  <th>Ações</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let func of List">
+                      <td>{{func.codigo}}</td>
+                      <td>{{func.nome}}</td>
+                      <td>
+                      <a class="btn btn-xs btn-success" [routerLink]="['./', func.codigo]">Editar</a>
+                  </td>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+</div>

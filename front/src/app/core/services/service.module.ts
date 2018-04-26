@@ -3,6 +3,8 @@ import { HttpService } from '@app/core';
 import { FuncionarioService } from '@app/core/services/funcionario.service';
 import { HttpClient } from '@app/core/http/http-client';
 import { DepartamentoService } from '@app/core/services/departamento.service';
+import { Movimentacao } from '@app/core/services/model/Movimentacao.model';
+import { MovimentacaoService } from '@app/core/services/Movimentacao.service';
 
 @NgModule({
   imports: [
@@ -13,7 +15,8 @@ import { DepartamentoService } from '@app/core/services/departamento.service';
   providers: [
     HttpClient,
     FuncionarioService,
-    DepartamentoService
+    DepartamentoService,
+    MovimentacaoService
   ]
 })
 export class ServicesModule { }
