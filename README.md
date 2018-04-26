@@ -2,7 +2,8 @@
 Sistema de controle de custos de departamento
 
 # Tecnologias
-Back:
+
+##Back:
 ASP.NET Core 2.0
 
 AutoMapper
@@ -17,7 +18,7 @@ Injeção de depêndencia
 
 Divisão em camadas
 
-Front:
+##Front:
 
 Angular 5
 
