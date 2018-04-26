@@ -4,22 +4,22 @@ Sistema de controle de custos de departamento
 # Tecnologias
 
 ##Back:
-ASP.NET Core 2.0
+-ASP.NET Core 2.0
 
-AutoMapper
+-AutoMapper
 
-Entity Framework Core
+-Entity Framework Core
 
-Migrations
+-Migrations
 
-Sql Server
+-Sql Server
 
-Injeção de depêndencia
+-Injeção de depêndencia
 
-Divisão em camadas
+-Divisão em camadas
 
 ##Front:
 
-Angular 5
+-Angular 5
 
-Bootstrap
+-Bootstrap
