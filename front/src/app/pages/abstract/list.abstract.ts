@@ -9,7 +9,7 @@ export abstract class ListAbstract<E extends Model, T extends Seletor, S extends
     private _seletor: T;
     private _totalItems: number;
 
-    private _list: E[];
+    public _list: E[];
 
     constructor(service: S, seletor: T){
         this.Seletor = seletor;

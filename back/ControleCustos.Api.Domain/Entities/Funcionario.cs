@@ -8,6 +8,8 @@ namespace ControleCustos.Api.Domain.Entities
     public class Funcionario: DomainBase
 	{
 		public string Nome { get; set; }
+		public int DepartamentoCodigo { get; set; }
+
 		public Departamento Departamento { get; set; }
 		public IEnumerable<Movimentacao> Movimentacoes { get; set; }
 	}

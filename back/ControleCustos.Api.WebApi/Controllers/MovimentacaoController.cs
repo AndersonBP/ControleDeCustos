@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using ControleCustos.Api.Domain.Entities;
 using ControleCustos.Api.Domain.Interfaces.Manager;
+using ControleCustos.Api.Domain.Seletores;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -23,14 +24,14 @@ namespace ControleCustos.Api.WebApi.Controllers
 
 		[HttpPost]
 		[Route("list")]
-		public ActionResult Get()
+		public ActionResult List([FromBody] MovimentacaoSeletor seletor)
 		{
 
 			ActionResult result;
 			var response = new ApiResponse<IEnumerable<Movimentacao>>();
 			try
 			{
-				var list = _manager.GetAll();
+				var list = _manager.GetList(seletor);
 				if (list == null)
 				{
 					throw new Exception("lista nula");

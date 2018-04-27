@@ -20,6 +20,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { ServicesModule } from '@app/core/services/service.module';
 import { ToastrModule } from 'ngx-toastr';
 import { DepartamentoModule } from '@app/pages/departamento/departamento.module';
+import { MovimentacaoModule } from '@app/pages/movimentacao/movimentacao.module';
 
 @NgModule({
   imports: [
@@ -35,6 +36,7 @@ import { DepartamentoModule } from '@app/pages/departamento/departamento.module'
     HomeModule,
     FuncionarioModule,
     DepartamentoModule,
+    MovimentacaoModule,
     ServicesModule,
     AboutModule,
     LoginModule,

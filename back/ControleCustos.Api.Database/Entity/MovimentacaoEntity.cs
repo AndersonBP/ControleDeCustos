@@ -9,6 +9,7 @@ namespace ControleCustos.Api.Database.Entity
     {
 		public FuncionarioEntity Funcionario { get; set; }
 		public string Descricao { get; set; }
+		public int FuncionarioCodigo { get; set; }
 		public decimal Valor { get; set; }
 	}
 }

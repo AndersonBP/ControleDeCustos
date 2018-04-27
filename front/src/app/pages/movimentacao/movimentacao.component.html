@@ -1,25 +1,46 @@
 <div class="panel panel-warning">
-  <div class="panel-heading">
-      <p>Movimentacaos</p> <button [routerLink]="'./novo'" class="btn btn-xs btn-success pull-right">Adicionar</button>
-  </div>
-  <div class="lista panel-body">
-      <table class="table table-condensed table-hover">
-          <thead>
-              <tr>
-                  <th (click)="setOrder('codigo')">#</th>
-                  <th>Nome</th>
-                  <th>Ações</th>
-              </tr>
-          </thead>
-          <tbody>
-              <tr *ngFor="let func of List">
-                      <td>{{func.codigo}}</td>
-                      <td>{{func.nome}}</td>
-                      <td>
-                      <a class="btn btn-xs btn-success" [routerLink]="['./', func.codigo]">Editar</a>
-                  </td>
-              </tr>
-          </tbody>
-      </table>
-  </div>
+    <div class="panel-heading">
+        <p>Movimentações</p>
+        <button [routerLink]="'./novo'" class="btn btn-xs btn-success pull-right">Adicionar</button>
+    </div>
+    <div class="lista panel-body">
+        <div class="row">
+            <!-- <div class="col-md-12 col-sm-12 col-md-offset-6col-sm-offset-6"> -->
+                <div class=" col-md-4 col-sm-4 form-group">
+                    <label>Filtrar Descrição</label>
+                    <input type="text" class="form-control" name="Nome" maxlength="500" [(ngModel)]="seletor.descricao" placeholder="Descrição">
+                </div>
+            <!-- </div> -->
+            <div class="col-md-4 col-sm-4">
+                <div class="form-group">
+                    <label>Funcionario</label>
+                    <ng-select name="funcionario" [options]="funcionarioOpcoes" [(ngModel)]="funcSelecionado" [allowClear]="false">
+                    </ng-select>
+                </div>
+            </div>
+            <div class=" col-md-2 col-sm-2 form-group">
+                <button class="btn btn-xs btn-success pull-right" (click)="filtrar()">Filtrar</button>
+            </div>
+        </div>
+        <table class="table table-condensed table-hover">
+            <thead>
+                <tr>
+                    <th (click)="setOrder('codigo')">#</th>
+                    <th>Descrição</th>
+                    <th>Valor</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let mov of List">
+                    <td>{{mov.codigo}}</td>
+                    <td title="{{mov.descricao}}">{{mov.descricao}}</td>
+                    <td>{{mov.valor}}</td>
+                    <td>
+                        <a class="btn btn-xs btn-success" [routerLink]="['./', mov.codigo]">Editar</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>

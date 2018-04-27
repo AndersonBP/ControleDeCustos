@@ -10,5 +10,7 @@ namespace ControleCustos.Api.Domain.Entities
 		public Funcionario Funcionario { get; set; }
 		public string Descricao { get; set; }
 		public decimal valor { get; set; }
+		public int FuncionarioCodigo { get; set; }
+
 	}
 }

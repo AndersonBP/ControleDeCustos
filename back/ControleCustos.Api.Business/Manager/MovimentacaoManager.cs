@@ -29,7 +29,7 @@ namespace ControleCustos.Api.Business.Manager
 
 		public List<Movimentacao> GetList(MovimentacaoSeletor seletor)
 		{
-			throw new NotImplementedException();
+			return this.repository.GetList(seletor);
 		}
 
 		public Movimentacao Insert(Movimentacao obj)

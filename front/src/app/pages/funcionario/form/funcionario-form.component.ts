@@ -36,6 +36,10 @@ export class FuncionarioFormComponent extends FormAbstract<Funcionario, Funciona
     ngOnInit() {
         this.query();
     }
+    salvar(){
+        this.Object.departamentoCodigo = this.deptoSelecionado as number;
+        this.save();
+    }
 
     carregarDepartamentos() {
         let sel = new DepartamentoSeletor();

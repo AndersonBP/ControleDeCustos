@@ -1,20 +1,24 @@
 <div class="panel panel-warning" *ngIf="Object">
-    <div class="panel-heading">Movimentacao </div>
+    <div class="panel-heading">Movimentações </div>
     <div class="lista panel-body">
 
         <div class="row">
-            <div class="col-md-6 col-sm-6 col-md-offset-3 col-sm-offset-3">
+            <div class="col-md-12 col-sm-12 col-md-offset-6col-sm-offset-6">
 
                 <form>
                     <div class="row">
-                        <div class=" col-md-6 col-sm-6 form-group">
-                            <label>Nome</label>
-                            <input type="text" class="form-control" name="Nome" maxlength="200" [(ngModel)]="Object.Nome" placeholder="Nome">
+                        <div class=" col-md-4 col-sm-4 form-group">
+                            <label>Descrição</label>
+                            <input type="text" class="form-control" name="Nome" maxlength="500" [(ngModel)]="Object.descricao" placeholder="Descrição">
                         </div>
-                        <div class="col-md-6 col-sm-6">
+                        <div class=" col-md-4 col-sm-4 form-group">
+                            <label>Valor</label>
+                            <input type="number" class="form-control" name="Valor" [(ngModel)]="Object.valor" placeholder="Valor">
+                        </div>
+                        <div class="col-md-4 col-sm-4">
                             <div class="form-group">
-                                <label>Departamentos</label>
-                                <ng-select name="mascaras" [options]="mascaraOpcoes" [(ngModel)]="deptoSelecionado" [allowClear]="false">
+                                <label>Funcionario</label>
+                                <ng-select name="funcionario" [options]="funcionarioOpcoes" [(ngModel)]="funcSelecionado" [allowClear]="true">
                                 </ng-select>
                             </div>
                         </div>
@@ -25,7 +29,7 @@
                             <button type="submit" class="btn btn-warning" [routerLink]="'../'">Cancelar</button>
                         </div>
                         <div class="text-center col-md-3 col-sm-3">
-                            <button type="submit" class="btn btn-success" (click)="save()">Salvar</button>
+                            <button type="submit" class="btn btn-success" [disabled]="!funcSelecionado" (click)="salvar()">Salvar</button>
                         </div>
                     </div>
 

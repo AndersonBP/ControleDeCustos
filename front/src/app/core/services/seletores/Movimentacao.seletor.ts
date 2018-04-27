@@ -4,6 +4,7 @@ export class MovimentacaoSeletor extends Seletor {
     Create(input: any) {
         throw new Error("Method not implemented.");
     }
-    public Nome: string;
+    public descricao: string;
+    public funcionarioCodigo: number;
    
 }
